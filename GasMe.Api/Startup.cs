@@ -11,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using GasMe.Data;
 using GasMe.Api.Hubs;
+using GasMe.Api.Options;
+using GasMe.Service;
 
 namespace GasMe.Api
 {
@@ -26,10 +28,11 @@ namespace GasMe.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => {
-                options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection")); });
+            services.AddDbContext<ApplicationDbContext>(options => { options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection")); });
             services.AddControllersWithViews();
             services.AddSignalR();
+            services.AddSwaggerGen();
+            services.AddScoped<ICapacityService, CapacityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,12 +49,16 @@ namespace GasMe.Api
                 app.UseHsts();
             }
             //app.UseHttpsRedirection();
+            
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
+            var swaggerOptions = new SwaggerOptions();
+            Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
+            app.UseSwagger(option => { option.RouteTemplate = swaggerOptions.JsonRoute; });
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description); });
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapHub<OrderHub>("hubs/order");

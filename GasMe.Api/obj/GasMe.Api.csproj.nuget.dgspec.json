@@ -33,6 +33,9 @@
             "projectReferences": {
               "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {
                 "projectPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj"
+              },
+              "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\GasMe.Service.csproj": {
+                "projectPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\GasMe.Service.csproj"
               }
             }
           }
@@ -60,6 +63,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
@@ -132,6 +139,73 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\GasMe.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\GasMe.Service.csproj",
+        "projectName": "GasMe.Service",
+        "projectPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\GasMe.Service.csproj",
+        "packagesPath": "C:\\Users\\Gilbert\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Gilbert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {
+                "projectPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [

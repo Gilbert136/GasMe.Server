@@ -10,19 +10,21 @@ using GasMe.Data;
 using GasMe.Data.Enums;
 using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
+using GasMe.Api.Contracts.V1;
+
 
 
 namespace GasMe.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class cylinderTypeController : ControllerBase
+    [Route(ApiRoutesBase.Base + "[controller]")]
+    public class QuantityController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
         private readonly ILogger<OrderController> _logger;
         private readonly IHubContext<OrderHub> _orderHub;
 
-        public cylinderTypeController(ApplicationDbContext db, ILogger<OrderController> logger, IHubContext<OrderHub> orderHub)
+        public QuantityController(ApplicationDbContext db, ILogger<OrderController> logger, IHubContext<OrderHub> orderHub)
         {
             _db = db;
             _logger = logger;
@@ -31,11 +33,11 @@ namespace GasMe.Api.Controllers
 
         [HttpGet]
         public async Task<object> getAll(){
-            return new { state = true, data = await (_db.CylinderType.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
+            return new { state = true, data = await (_db.Quantity.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
         }
 
         [HttpPost]
-        public async Task<object> save([FromBody] List<CylinderType> data){
+        public async Task<object> save([FromBody] List<Quantity> data){
             try{
                 data.ForEach(x => {
                     switch(x.status){
@@ -43,14 +45,14 @@ namespace GasMe.Api.Controllers
                         {
                             x.status = EntityStatus.Active;
                             x.createdDate = DateTime.Now;
-                            _db.CylinderType.Add(x);
+                            _db.Quantity.Add(x);
                         }
                         break;
                         case EntityStatus.Delete:
                         case EntityStatus.Active:
                         {
                             x.modifiedDate = DateTime.Now;
-                            _db.CylinderType.Update(x);
+                            _db.Quantity.Update(x);
                         }
                         break;
                     }

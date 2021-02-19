@@ -10,12 +10,14 @@ using GasMe.Data;
 using GasMe.Data.Enums;
 using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
+using GasMe.Api.Contracts.V1;
+
 
 
 namespace GasMe.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route(ApiRoutesBase.Base + "[controller]")]
     public class ScheduleController : ControllerBase
     {
         private readonly ApplicationDbContext _db;

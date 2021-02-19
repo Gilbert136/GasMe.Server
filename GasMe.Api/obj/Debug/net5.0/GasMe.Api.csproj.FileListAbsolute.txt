@@ -294,3 +294,10 @@ D:\Project\GasMe\GasMe.Server\Gasme.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Si
 D:\Project\GasMe\GasMe.Server\Gasme.Api\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 D:\Project\GasMe\GasMe.Server\Gasme.Api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Project\GasMe\GasMe.Server\Gasme.Api\bin\Debug\net5.0\System.IO.Pipelines.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\obj\Debug\net5.0\GasMe.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\GasMe.Service.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\GasMe.Service.pdb
