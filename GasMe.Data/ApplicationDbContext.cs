@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using GasMe.Data.Models;
 
 namespace GasMe.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityDbContext
     {
+        private readonly DbContextOptions _options;
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)  : base(options)
         {
-            
+            _options = options;
         }
 
         public DbSet<Order> Order { get; set; }
@@ -20,6 +23,13 @@ namespace GasMe.Data
         public DbSet<Capacity> Capacity { get; set; }
         public DbSet<Inbox> Inbox { get; set; }
         public DbSet<Unit> Unit { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<RefreshToken> RefreshToken { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+        }
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)
         // {

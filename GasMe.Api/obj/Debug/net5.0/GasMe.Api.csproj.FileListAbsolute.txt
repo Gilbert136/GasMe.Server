@@ -247,7 +247,6 @@ D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.IdentityModel
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\System.Runtime.Caching.dll
@@ -301,3 +300,10 @@ D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\GasMe.Service.dll
 D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\GasMe.Service.pdb
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Project\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll

@@ -1,4 +1,4 @@
-namespace GasMe.Api.Options
+namespace GasMe.Service.Options
 {
     public class SwaggerOptions
     {

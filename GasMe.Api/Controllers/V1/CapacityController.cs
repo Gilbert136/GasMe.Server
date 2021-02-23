@@ -12,12 +12,16 @@ using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
 using GasMe.Api.Contracts.V1;
 using GasMe.Service;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 
 
 namespace GasMe.Api.Controllers
 {
     [ApiController]
     [Route(ApiRoutesBase.Base + "[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CapacityController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
