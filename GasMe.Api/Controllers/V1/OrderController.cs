@@ -11,13 +11,16 @@ using GasMe.Data.Enums;
 using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
 using GasMe.Api.Contracts.V1;
-
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using GasMe.Data.Models.EntityBase;
 
 
 namespace GasMe.Api.Controllers
 {
     [ApiController]
     [Route(ApiRoutesBase.Base + "[controller]")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class OrderController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
@@ -31,13 +34,18 @@ namespace GasMe.Api.Controllers
             _orderHub = orderHub;
         }
 
+        [HttpGet("{id}")]
+        public async Task<ResultBase<Order>> GetAsync(int id){
+            return new ResultBase<Order> { state = true, data = await (_db.Order.FirstOrDefaultAsync(x => (x.id == id) && (x.status == EntityStatus.Active))) };
+        }
+
         [HttpGet]
-        public async Task<object> getAll(){
-            return new { state = true, data = await (_db.Order.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
+        public async Task<ResultBase<List<Order>>> GetsAsync(){
+            return new ResultBase<List<Order>> { state = true, data = await (_db.Order.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
         }
 
         [HttpPost]
-        public async Task<object> save([FromBody] List<Order> orders){
+        public async Task<object> SaveAsync([FromBody] List<Order> orders){
             try{
                 orders.ForEach(x => {
                     switch(x.status){

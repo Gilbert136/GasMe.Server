@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
 using GasMe.Api.Contracts.V1;
 using GasMe.Service;
+using GasMe.Data.Models.EntityBase;
+
 
 
 namespace GasMe.Api.Controllers
@@ -34,12 +36,12 @@ namespace GasMe.Api.Controllers
         }
 
         [HttpPost("auth")]
-        public async Task<object> auth([FromBody] User data){
+        public async Task<ResultBase<User>> auth([FromBody] User data){
             try{
                 return await _identityService.AuthAsync(data);
             }
             catch(Exception e){
-                return new { state = false, message = e.Message };
+                return new ResultBase<User> { state = false, message = e.Message };
             }
         }
 

@@ -11,6 +11,7 @@ using GasMe.Data.Enums;
 using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
 using GasMe.Api.Contracts.V1;
+using GasMe.Data.Models.EntityBase;
 
 
 
@@ -32,8 +33,8 @@ namespace GasMe.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<object> getAll(){
-            return new { state = true, data = await (_db.Inbox.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
+        public async Task<ResultBase<List<Inbox>>> GetsAsync(){
+            return new ResultBase<List<Inbox>> { state = true, data = await (_db.Inbox.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
         }
 
         [HttpPost]
