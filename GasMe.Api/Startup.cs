@@ -36,7 +36,7 @@ namespace GasMe.Api
             var jwtSettings = new JwtSettings();
             Configuration.GetSection(nameof(JwtSettings)).Bind(jwtSettings);
             services.AddSingleton(jwtSettings);
-            services.AddDbContext<ApplicationDbContext>(options => { options.UseSqlServer( Configuration.GetConnectionString("DefaultConnection")); });
+            services.AddDbContext<ApplicationDbContext>(options => { options.UseSqlServer( Configuration.GetConnectionString("SqlAzureConnection")); });
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews().AddJsonOptions(options => { options.JsonSerializerOptions.IgnoreNullValues = true; });
             services.AddHttpContextAccessor();
