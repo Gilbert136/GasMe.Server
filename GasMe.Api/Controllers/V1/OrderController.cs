@@ -20,7 +20,7 @@ namespace GasMe.Api.Controllers
 {
     [ApiController]
     [Route(ApiRoutesBase.Base + "[controller]")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class OrderController : ControllerBase
     {
         private readonly ApplicationDbContext _db;

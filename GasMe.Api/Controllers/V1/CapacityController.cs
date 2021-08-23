@@ -21,7 +21,7 @@ namespace GasMe.Api.Controllers
 {
     [ApiController]
     [Route(ApiRoutesBase.Base + "[controller]")]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class CapacityController : ControllerBase
     {
         private readonly ApplicationDbContext _db;

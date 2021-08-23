@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {}
+    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {}
   },
   "projects": {
-    "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {
+    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj",
         "projectName": "GasMe.Data",
-        "projectPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj",
+        "projectPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Data\\GasMe.Data.csproj",
         "packagesPath": "C:\\Users\\Gilbert\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\GasMe\\GasMe.Server\\GasMe.Data\\obj\\",
+        "outputPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
         }
       }
     }
