@@ -10,8 +10,9 @@ namespace GasMe.Data.Models
     {
         [Key]
         public int id { get; set; }
-        public string code { get; set; }
+        public string alias { get; set; }
         public string name { get; set; }
+        public UnitClasification clasification { get; set; }
         public string description { get; set; }
     }
 }
