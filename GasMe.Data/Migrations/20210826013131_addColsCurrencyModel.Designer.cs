@@ -4,14 +4,16 @@ using GasMe.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GasMe.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210826013131_addColsCurrencyModel")]
+    partial class addColsCurrencyModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -381,7 +383,7 @@ namespace GasMe.Data.Migrations
                     b.Property<string>("alias")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("classification")
+                    b.Property<byte>("clasification")
                         .HasColumnType("tinyint");
 
                     b.Property<string>("createdBy")

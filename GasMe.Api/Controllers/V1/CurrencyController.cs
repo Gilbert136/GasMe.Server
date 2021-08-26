@@ -11,8 +11,6 @@ using GasMe.Data.Enums;
 using Microsoft.AspNetCore.SignalR;
 using GasMe.Api.Hubs;
 using GasMe.Api.Contracts.V1;
-using GasMe.Data.Models.EntityBase;
-
 
 
 
@@ -20,45 +18,31 @@ namespace GasMe.Api.Controllers
 {
     [ApiController]
     [Route(ApiRoutesBase.Base + "[controller]")]
-    public class UnitController : ControllerBase
+    public class CurrencyController : ControllerBase
     {
         private readonly ApplicationDbContext _db;
         private readonly ILogger<OrderController> _logger;
         private readonly IHubContext<OrderHub> _orderHub;
 
-        public UnitController(ApplicationDbContext db, ILogger<OrderController> logger, IHubContext<OrderHub> orderHub)
+        public CurrencyController(ApplicationDbContext db, ILogger<OrderController> logger, IHubContext<OrderHub> orderHub)
         {
             _db = db;
             _logger = logger;
             _orderHub = orderHub;
         }
 
-        private IQueryable<Unit> _get
-        {
-            get
-            {
-                return _db.Unit.Where(x => x.status == EntityStatus.Active);
-            }
-        }
-
         [HttpGet]
         public async Task<object> getAll()
         {
-            return new { state = true, data = await (_db.Unit.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
-        }
-
-        [HttpGet("classification/{query}")]
-        public async Task<ResultBase<IEnumerable<Unit>>> GetAsync(UnitClasification query)
-        {
-            return new ResultBase<IEnumerable<Unit>> { state = true, data = await _get.Where(x => x.classification == query).ToListAsync() };
+            return new { state = true, data = await (_db.Currency.Where(x => x.status == EntityStatus.Active).ToListAsync()) };
         }
 
         [HttpPost]
-        public async Task<object> save([FromBody] List<Unit> Unit)
+        public async Task<object> save([FromBody] List<Currency> Currency)
         {
             try
             {
-                Unit.ForEach(x =>
+                Currency.ForEach(x =>
                 {
                     switch (x.status)
                     {
@@ -66,20 +50,20 @@ namespace GasMe.Api.Controllers
                             {
                                 x.status = EntityStatus.Active;
                                 x.createdDate = DateTime.Now;
-                                _db.Unit.Add(x);
+                                _db.Currency.Add(x);
                             }
                             break;
                         case EntityStatus.Delete:
                         case EntityStatus.Active:
                             {
                                 x.modifiedDate = DateTime.Now;
-                                _db.Unit.Update(x);
+                                _db.Currency.Update(x);
                             }
                             break;
                     }
                 });
                 await _db.SaveChangesAsync();
-                return new { state = true, data = Unit.ToList() };
+                return new { state = true, data = Currency.ToList() };
             }
             catch (Exception e)
             {
