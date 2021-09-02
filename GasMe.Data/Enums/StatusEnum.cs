@@ -17,7 +17,7 @@ namespace GasMe.Data.Enums
         cancelled,
     }
 
-    public enum UnitClasification : byte
+    public enum UnitClassification : byte
     {
         Currency = 1,
         Mass,

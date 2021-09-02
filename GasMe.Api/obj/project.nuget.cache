@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lpzCDOjwI4iu98IrldhkKN8mDDEMsyMwjsHRom0nz/c5ahX/b36QkKW3QtR4Z6igrOlic4OpS4V/rYpJZ12KdA==",
+  "dgSpecHash": "WlImsnXyArRWSTn7tylWicxhv/4ejQWeKRAA/R0UlznEjBHkQMc+dO6z2iOipuizkYbvySG/z+uTg5PnHc4RFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj",
+  "projectFilePath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gilbert\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.3\\microsoft.aspnetcore.authentication.jwtbearer.5.0.3.nupkg.sha512",

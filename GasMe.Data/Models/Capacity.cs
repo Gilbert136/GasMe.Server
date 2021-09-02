@@ -10,7 +10,6 @@ namespace GasMe.Data.Models
     {
         [Key]
         public int id { get; set; }
-        public string code { get; set; }
         public string alias { get; set; }
         public string name { get; set; }
 
@@ -18,16 +17,20 @@ namespace GasMe.Data.Models
         public decimal? price { get; set; }
 
         [Column(TypeName = "decimal(18,4)")]
-        public decimal? size { get; set; }
+        public decimal? value { get; set; }
         public string description { get; set; }
+
+
 
         public int? unitId { get; set; }
         public int? currencyId { get; set; }
 
-        [NotMapped]
+
+
+        [ForeignKey(nameof(Models.Capacity.unitId))]
         public virtual Unit unit { get; set; }
 
-        [NotMapped]
+        [ForeignKey(nameof(Models.Capacity.currencyId))]
         public virtual Currency currency { get; set; }
     }
 }

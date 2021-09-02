@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj": {}
+    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj": {
+    "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj",
         "projectName": "GasMe.Api",
-        "projectPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj",
+        "projectPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj",
         "packagesPath": "C:\\Users\\Gilbert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\obj\\",
+        "outputPath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

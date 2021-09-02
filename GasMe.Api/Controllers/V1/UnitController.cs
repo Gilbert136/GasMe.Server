@@ -48,7 +48,7 @@ namespace GasMe.Api.Controllers
         }
 
         [HttpGet("classification/{query}")]
-        public async Task<ResultBase<IEnumerable<Unit>>> GetAsync(UnitClasification query)
+        public async Task<ResultBase<IEnumerable<Unit>>> GetAsync(UnitClassification query)
         {
             return new ResultBase<IEnumerable<Unit>> { state = true, data = await _get.Where(x => x.classification == query).ToListAsync() };
         }

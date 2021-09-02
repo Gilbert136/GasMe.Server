@@ -27,33 +27,44 @@ namespace GasMe.Service
             _db = db;
         }
 
-        
-        public Task<List<Capacity>> Gets(){
-            return (_db.Capacity.Where(x => x.status == EntityStatus.Active).ToListAsync());
+        private IQueryable<Capacity> _get
+        {
+            get
+            {
+                return _db.Capacity.Where(x => x.status == EntityStatus.Active);
+            }
         }
 
-        public Task<Capacity> Get(int id){
+        public Task<List<Capacity>> Gets()
+        {
+            return _get.Include(x => x.unit).Include(x => x.currency).ToListAsync();
+        }
+
+        public Task<Capacity> Get(int id)
+        {
             return (_db.Capacity.FirstOrDefaultAsync(x => (x.id == id) && (x.status == EntityStatus.Active)));
         }
 
-        public async Task<List<Capacity>> Save(List<Capacity> data){
-            data.ForEach(x => {
-                switch(x.status)
+        public async Task<List<Capacity>> Save(List<Capacity> data)
+        {
+            data.ForEach(x =>
+            {
+                switch (x.status)
                 {
                     case EntityStatus.New:
-                    {
-                        x.status = EntityStatus.Active;
-                        x.createdDate = DateTime.Now;
-                        _db.Capacity.Add(x);
-                    }
-                    break;
+                        {
+                            x.status = EntityStatus.Active;
+                            x.createdDate = DateTime.Now;
+                            _db.Capacity.Add(x);
+                        }
+                        break;
                     case EntityStatus.Delete:
                     case EntityStatus.Active:
-                    {
-                        x.modifiedDate = DateTime.Now;
-                        _db.Capacity.Update(x);
-                    }
-                    break;
+                        {
+                            x.modifiedDate = DateTime.Now;
+                            _db.Capacity.Update(x);
+                        }
+                        break;
                 }
             });
             await _db.SaveChangesAsync();
