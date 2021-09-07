@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WlImsnXyArRWSTn7tylWicxhv/4ejQWeKRAA/R0UlznEjBHkQMc+dO6z2iOipuizkYbvySG/z+uTg5PnHc4RFA==",
+  "dgSpecHash": "zkSHSzKGktTqX+dwY03Fae9Z4oiNQzeb+1mUJF2DRcx6UDLRxyDjIUwl3W6TgkfE3GhOTCzO1cpK5uOUmPthIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\Gasme.api\\GasMe.Api.csproj",
+  "projectFilePath": "C:\\Users\\Gilbert\\Desktop\\GasMe\\GasMe.Server\\GasMe.Api\\GasMe.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gilbert\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.3\\microsoft.aspnetcore.authentication.jwtbearer.5.0.3.nupkg.sha512",
@@ -55,6 +55,7 @@
     "C:\\Users\\Gilbert\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Gilbert\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Gilbert\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

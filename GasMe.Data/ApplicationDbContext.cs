@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using GasMe.Data.Models;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.Text.Json;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace GasMe.Data
 {
-    public class ApplicationDbContext: IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         private readonly DbContextOptions _options;
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)  : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
             _options = options;
         }
@@ -18,7 +22,7 @@ namespace GasMe.Data
         public DbSet<Order> Order { get; set; }
         public DbSet<Schedule> Schedule { get; set; }
         public DbSet<CylinderType> CylinderType { get; set; }
-        public DbSet<Currency> Currency { get; set; }  
+        public DbSet<Currency> Currency { get; set; }
         public DbSet<Quantity> Quantity { get; set; }
         public DbSet<Capacity> Capacity { get; set; }
         public DbSet<Inbox> Inbox { get; set; }
@@ -27,8 +31,11 @@ namespace GasMe.Data
         public DbSet<RefreshToken> RefreshToken { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Schedule>()
+                .Property(t => t.PeridDays)
+                .HasConversion(new EnumCollectionJsonValueConverter<Day>())
+                .Metadata.SetValueComparer(new CollectionValueComparer<Day>());
             base.OnModelCreating(modelBuilder);
-
         }
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)

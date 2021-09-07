@@ -402,3 +402,4 @@ C:\Users\Gilbert\Desktop\GasMe\GasMe.Server\GasMe.Api\obj\Debug\net5.0\GasMe.Api
 C:\Users\Gilbert\Desktop\GasMe\GasMe.Server\GasMe.Api\obj\Debug\net5.0\ref\GasMe.Api.dll
 C:\Users\Gilbert\Desktop\GasMe\GasMe.Server\GasMe.Api\obj\Debug\net5.0\GasMe.Api.pdb
 C:\Users\Gilbert\Desktop\GasMe\GasMe.Server\GasMe.Api\obj\Debug\net5.0\GasMe.Api.genruntimeconfig.cache
+C:\Users\Gilbert\Desktop\GasMe\GasMe.Server\GasMe.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
